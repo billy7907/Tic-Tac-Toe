@@ -22,7 +22,7 @@ class Board extends Component {
 
 	handleClick(i) {
 		const squares = this.state.squares.slice();
-		if (calculateWinner(squares || squares[i])) {
+		if (calculateWinner(squares) || squares[i]) {
 			return;
 		}
 		squares[i] = this.state.xIsNext ? 'X' : 'O';
